@@ -1,1 +1,181 @@
 // Add any custom Sass & CSS here
+html, body {
+	font-family: $serif;
+	line-height: 150%;
+	color: $white;
+	background-color: $black;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1.15em;
+}
+
+.highlight {
+	color: $highlight;
+}
+
+.transparent {
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+}
+
+.sticky {
+	z-index: 2;
+}
+nav, .title-bar {
+	font-family: $sans;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+	a {
+		text-align: center;
+		color: $white;
+		&:focus {
+			color: inherit;
+		}
+		&:hover {
+			color: $highlight !important;
+		}
+	}
+}
+
+.white {
+	background-color: $white;
+	color: $black;
+	width: 100%;
+}
+
+
+#hero {
+	background-image: url("../data/computer.jpg");
+	background-size: cover;
+	background-position-x: center;
+	background-attachment: fixed;
+
+	height: 100vh;
+	width: 100%;
+	//TODO: make this a variable for nav height?
+	// margin-top: -54px;
+	//From http://foundation.zurb.com/forum/posts/132-full-width-row
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial;
+
+	color: $white;
+
+	.hero-text {
+		@include vert-center;
+		text-align: center;
+		h1 {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.slick-prev:before, .slick-next:before { 
+    color: $black !important;
+}
+
+#about {
+	padding-bottom: 150px;
+	.info {
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-top: 150px;
+
+		h3 {
+			color: $highlight;
+			letter-spacing: 2px;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+}
+
+#projects {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	.title {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-bottom: 60px;
+	}
+
+	p {
+		padding: 0 30px;
+	}
+
+	.slick-dots {
+		// Foundation messes with the centering of Slick
+		margin-left: -15px;
+	}
+}
+
+// http://benkaminski.com/2013/05/26/responsive-html5-css3-html5-video-background-in-div-no-javascript/amp/
+// http://jsfiddle.net/mgmilcher/8R7Xx/sho/
+#future {
+	position: relative;
+	height: 500px;
+	background-color: black;
+	width: 100%;
+
+	.video-container {
+		@include absolute;
+
+		video {
+			height: 100%;
+		}
+
+		.filter {
+			@include absolute;
+			background: rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	.text-container {
+		@include absolute;
+		font-size: 1.4em;
+
+		.row {
+			max-width: 889px;
+			margin: 0 auto;
+
+			@include vert-center;
+
+			p {
+				padding-left: 20px;
+				padding-right: 20px;
+				text-shadow: black 1px 1px 1px;
+			}
+		}
+	}
+
+}
+
+#contact {
+	padding-bottom: 150px;
+	padding-top: 100px;
+	
+	h3 {
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: $highlight;
+	}
+
+	i {
+		margin-top: 60px;
+		font-size: 5em;
+		color: $white;
+		&:hover {
+			color: $highlight;
+		}
+	}
+}

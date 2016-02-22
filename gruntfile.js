@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     watch: {
       options: { livereload: true },
       scripts: {
-        files: ['js/*.js'],
+        files: ['source_js/*.js'],
         tasks: ['clean','uglify'],
         //tasks: ['copy']
       }, //script
@@ -78,5 +78,6 @@ module.exports = function(grunt) {
       }
   }
   }) //initConfig
-  grunt.registerTask('default', ['express:dev', 'watch', 'uglify']);
+  grunt.registerTask('serve', ['express:dev', 'watch']);
+  grunt.registerTask('default', ['uglify', 'compass:dev', 'serve']);
 } //exports

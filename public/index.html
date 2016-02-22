@@ -6,39 +6,148 @@
   <title>MP2 Starter</title>
 
   <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./foundation6_lib/css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-  <nav class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">MP2</li>
-        <li><a href="https://courses.engr.illinois.edu/cs498rk1/">Web Page</a></li>
-      </ul>
-    </div>
-  </nav>
-	<div class="row text-center">
-		<h3>Hello. It's Me.</h3>
-	</div>
-	<section class="row">
-		<div class="alert columns small-12 large-6">
-			<div class="text-center"><img src="http://lorempixel.com/400/200/cats"/></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
-      </p>
-    </div>
-		<div class="columns small-12 large-6">
-	  	<div class="text-center"><img src="http://lorempixel.com/400/200/nature"/></div>
-	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!
-      </p>
+  <section id="hero" class="row">
+    <div class="transparent"></div>
+    <div class="hero-text columns">
+      <h1 class="highlight">Chad Franzen</h1>
+      <h3>is a <span class="highlight">software engineer</span> and student at the <span class="highlight">University of Illinois</span></h3>
     </div>
   </section>
 
+  <div id="site-container">
+    <div data-sticky-container>
+      <div class="sticky" data-sticky data-options="marginTop:0;anchor:site-container;stickyOn:small" style="width:100%;">
+        <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="nav-menu" class="top-bar" data-magellan data-activeClass="highlight">
+          <ul class="vertical medium-horizontal menu expanded">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section id="about" class="row">
+      <div class="columns">
+        <div class="row">
+          <div class="columns medium-4 info fade">
+            <h3>ENGINEER</h3> 
+             <p>
+              I have experience with a broad range of computer science topics, with an emphasis in web development. I've previously interned as a front-end web engineer at Sprout Social, where I spearheaded the JavaScript development of a new feature projected to generate millions in revenue.
+             </p>
+          </div>
+          <div class="columns medium-4 info fade">
+            <h3>STUDENT</h3> 
+             <p>
+              At UIUC, I'm a James Scholar and a member of the Campus Honors Program. In high school, I competed in Worldwide Youth in Science and Engineering and won medals at the state finals. In elementary school I once earned a gold star on my multiplication test.
+             </p>
+          </div>
+          <div class="columns medium-4 info fade">
+            <h3>REAL PERSON</h3> 
+             <p>
+               I'm a Chicagoland native, raised in the northwest suburbs. My hobbies include reading, video games, listening to standup comedy, and bugging people about A Song of Ice and Fire. Daft Punk's Discovery is the best album of all time and I will hear no arguments to the contrary.
+             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="white">
+      <section id="projects" class="row">
+        <div class="row title">
+          <h3>Projects</h3>
+        </div>
+        <div class="row">
+        <div class="columns medium-8 medium-centered large-centered carousel fade">
+          <div>
+            <h4>Sprout Social: Message Approval</h4>
+            <p>I took point on the front-end development for Sprout's new message approval system. This project demanded a complex CRUD workflow that required building several new Backbone components and refactoring legacy code. Additionally, I designed several new, reusable React components that were added to Sprout's pattern library. This feature is projected to drive millions of dollars of new revenue for Sprout.</p>
+         </div>
+         <div>
+           <h4>Sprout Social: Facebook Mentions</h4>
+           <p>I worked in a team of two to add Facebook page mentions to Sprout's message widget. This involved adding a Backbone view to an existing jQuery UI component, as well as handling several asynchronous API requests to look up Facebook page results and store frequently mentioned pages.</p>
+         </div>
+         <div>
+           <h4>Online Gwent</h4>
+           <p>This is an online, multiplayer version of the card game Gwent, which appears in The Witcher 3. It allows two users to play a game of Gwent with each other. On the back end, this app runs on Node.js with Websockets for connecting users. The front-end was built with React and Sass.</p>
+         </div>
+         <div>
+         <h4>Bloodborne Skill Calculator</h4>
+         <p>This is a web app to help others plan their characters in the role-playing game Bloodborne. Users can enter their current and planned attributes through Backbone views, which flows into a Backbone model that calculates resulting character statistics and bubbles them back up to the view. Despite dealing with complex, interdependent data, I maintained an intuitive UI for the user.</p>
+         </div> 
+         <div>
+          <h4>Super Puzzle Ninja</h4>
+          <p>This is a Flash game that I made with the help of the Flixel library in May 2014. It's an action-puzzle game that implements a complex gameplay loop, sprite-based graphics, particle effects, saved high scores, and more while also accounting for performance.</p>
+         </div>
+         <div>
+           <h4>ASoIaF Character Generator</h4>
+           <p>This is a simple web tool that creates characters fit to live in the world of Westeros. Users can select gender, region, and house options, and then generate characters based on their specifications. I used JavaScript to handle character generation and jQuery to implement the UI, which involves a collapsible, dynamic bottom drawer.</p>
+         </div>
+       </div>
+       </div>
+     </section>
+   </div>
+   <section id="future">
+    <div class="video-container">
+      <video id="video" no-controls autoplay muted loop src="./data/nyc.mp4"></video>
+      <div class="filter"></div>
+    </div>
+    <div class="text-container">
+      <div class="row">
+        <div class="columns medium-4 medium-offset-7">
+          <p>This summer, I will be interning with <span class="highlight">Google</span> in <span class="highlight">New York City</span>, where I will be a part of their Answers team.</p>
+        </div>
+      </div>
+    </div>
+   </section>
+   <section id="contact" class="row">
+    <div class="row">
+      <h3>Contact</h3>
+    </div>
+    <div class="row">
+      <div class="columns small-10 medium-8 small-centered">
+        <div class="row">
+          <div class="columns small-6 medium-3 contact-icon fade">
+            <a href="https://www.facebook.com/chad.franzen.9">
+              <i class="fa fa-facebook-official"></i></a>
+            </div>
+            <div class="columns small-6 medium-3 contact-icon fade">
+              <a href="https://twitter.com/_chadfranzen">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </div>
+            <div class="columns small-6 medium-3 contact-icon fade">
+              <a href="https://www.linkedin.com/in/chad-franzen-443498a4">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+            <div class="columns small-6 medium-3 contact-icon fade">
+              <a href="https://github.com/chadfranzen">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <!-- Scripts -->
-  <script src="./js/script.js"></script>
   <script src="./lib/jquery-2.1.3.min/index.js"></script>
   <script src="./foundation6_lib/js/foundation.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  <script src="./js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
