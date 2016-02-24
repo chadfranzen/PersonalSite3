@@ -14,6 +14,7 @@ p {
 
 h1, h3 {
 	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 .highlight {
@@ -91,8 +92,6 @@ h1, h3 {
 
 	height: 100vh;
 	width: 100%;
-	//TODO: make this a variable for nav height?
-	// margin-top: -54px;
 	//From http://foundation.zurb.com/forum/posts/132-full-width-row
 	margin-left: auto;
 	margin-right: auto;
@@ -106,12 +105,12 @@ h1, h3 {
 		h1 {
 			text-transform: uppercase;
 		}
+		h3 {
+			text-transform: none;
+		}
 	}
 }
 
-.slick-prev:before, .slick-next:before { 
-    color: $black !important;
-}
 
 #about {
 	padding-bottom: 150px;
@@ -142,6 +141,9 @@ h1, h3 {
 	.slick-dots {
 		// Foundation messes with the centering of Slick
 		margin-left: -15px;
+	}
+	.slick-prev:before, .slick-next:before { 
+		color: $black !important;
 	}
 }
 
@@ -188,15 +190,15 @@ h1, h3 {
 	padding-top: 100px;
 	padding-bottom: 100px;
 
-	button {
-		border: 1px solid $black;
+	.modal {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
 		padding: 50px 0px;
 		box-sizing: border-box;
 		color: $black;
 
 		&.middle {
-			border-left: none;
-			border-right: none;
+			border: none;
 		}
 
 		i {
@@ -258,6 +260,21 @@ h1, h3 {
 		color: $white;
 		&:hover {
 			color: $highlight;
+		}
+	}
+}
+
+@media (min-width: 640px) {
+	#skills {
+		.modal {
+			border: 1px solid black;
+
+			&.middle {
+				border-top: 1px solid black;
+				border-bottom: 1px solid black;
+				border-left: none;
+				border-right: none;
+			}
 		}
 	}
 }
