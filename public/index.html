@@ -16,138 +16,234 @@
 </head>
 
 <body>
-  <section id="hero" class="row">
-    <div class="transparent"></div>
-    <div class="hero-text columns">
-      <h1 class="highlight">Chad Franzen</h1>
-      <h3>is a <span class="highlight">software engineer</span> and student at the <span class="highlight">University of Illinois</span></h3>
-    </div>
-  </section>
-
   <div id="site-container">
-    <div data-sticky-container>
+    <div class="nav-container" data-sticky-container>
       <div class="sticky" data-sticky data-options="marginTop:0;anchor:site-container;stickyOn:small" style="width:100%;">
         <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
           <div class="title-bar-title">Menu</div>
         </div>
-        <nav id="nav-menu" class="top-bar" data-magellan data-activeClass="highlight">
+        <nav id="nav-menu" class="top-bar large" data-magellan data-activeClass="highlight">
           <ul class="vertical medium-horizontal menu expanded">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a id="nav-last" href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
     </div>
-    <section id="about" class="row">
+
+    <section id="hero" class="row">
+      <div class="transparent"></div>
+      <div class="hero-text columns">
+        <h1 class="highlight">Chad Franzen</h1>
+        <h3>is a <span class="highlight">software engineer</span> and student at the <span class="highlight">University of Illinois</span></h3>
+      </div>
+    </section>
+
+    <section id="about" class="row" data-magellan-target="about">
       <div class="columns">
         <div class="row">
           <div class="columns medium-4 info fade">
             <h3>ENGINEER</h3> 
-             <p>
+            <p>
               I have experience with a broad range of computer science topics, with an emphasis in web development. I've previously interned as a front-end web engineer at Sprout Social, where I spearheaded the JavaScript development of a new feature projected to generate millions in revenue.
-             </p>
+            </p>
           </div>
           <div class="columns medium-4 info fade">
             <h3>STUDENT</h3> 
-             <p>
+            <p>
               At UIUC, I'm a James Scholar and a member of the Campus Honors Program. In high school, I competed in Worldwide Youth in Science and Engineering and won medals at the state finals. In elementary school I once earned a gold star on my multiplication test.
-             </p>
+            </p>
           </div>
           <div class="columns medium-4 info fade">
             <h3>REAL PERSON</h3> 
-             <p>
-               I'm a Chicagoland native, raised in the northwest suburbs. My hobbies include reading, video games, listening to standup comedy, and bugging people about A Song of Ice and Fire. Daft Punk's Discovery is the best album of all time and I will hear no arguments to the contrary.
-             </p>
-          </div>
-        </div>
+            <p>
+             I'm a Chicagoland native, raised in the northwest suburbs. My hobbies include reading, video games, listening to standup comedy, and bugging people about A Song of Ice and Fire. Daft Punk's Discovery is the best album of all time and I will hear no arguments to the contrary.
+           </p>
+         </div>
+       </div>
       </div>
     </section>
-    <div class="white">
-      <section id="projects" class="row">
-        <div class="row title">
-          <h3>Projects</h3>
-        </div>
-        <div class="row">
+
+  <div class="white">
+    <section id="projects" class="row" data-magellan-target="projects">
+      <div class="row title">
+        <h3>Projects</h3>
+      </div>
+      <div class="row">
         <div class="columns medium-8 medium-centered large-centered carousel fade">
           <div>
             <h4>Sprout Social: Message Approval</h4>
             <p>I took point on the front-end development for Sprout's new message approval system. This project demanded a complex CRUD workflow that required building several new Backbone components and refactoring legacy code. Additionally, I designed several new, reusable React components that were added to Sprout's pattern library. This feature is projected to drive millions of dollars of new revenue for Sprout.</p>
-         </div>
-         <div>
+          </div>
+          <div>
            <h4>Sprout Social: Facebook Mentions</h4>
            <p>I worked in a team of two to add Facebook page mentions to Sprout's message widget. This involved adding a Backbone view to an existing jQuery UI component, as well as handling several asynchronous API requests to look up Facebook page results and store frequently mentioned pages.</p>
-         </div>
+          </div>
          <div>
            <h4>Online Gwent</h4>
            <p>This is an online, multiplayer version of the card game Gwent, which appears in The Witcher 3. It allows two users to play a game of Gwent with each other. On the back end, this app runs on Node.js with Websockets for connecting users. The front-end was built with React and Sass.</p>
          </div>
          <div>
-         <h4>Bloodborne Skill Calculator</h4>
-         <p>This is a web app to help others plan their characters in the role-playing game Bloodborne. Users can enter their current and planned attributes through Backbone views, which flows into a Backbone model that calculates resulting character statistics and bubbles them back up to the view. Despite dealing with complex, interdependent data, I maintained an intuitive UI for the user.</p>
+           <h4>Bloodborne Skill Calculator</h4>
+           <p>This is a web app to help others plan their characters in the role-playing game Bloodborne. Users can enter their current and planned attributes through Backbone views, which flows into a Backbone model that calculates resulting character statistics and bubbles them back up to the view. Despite dealing with complex, interdependent data, I maintained an intuitive UI for the user.</p>
          </div> 
-         <div>
-          <h4>Super Puzzle Ninja</h4>
-          <p>This is a Flash game that I made with the help of the Flixel library in May 2014. It's an action-puzzle game that implements a complex gameplay loop, sprite-based graphics, particle effects, saved high scores, and more while also accounting for performance.</p>
-         </div>
-         <div>
-           <h4>ASoIaF Character Generator</h4>
-           <p>This is a simple web tool that creates characters fit to live in the world of Westeros. Users can select gender, region, and house options, and then generate characters based on their specifications. I used JavaScript to handle character generation and jQuery to implement the UI, which involves a collapsible, dynamic bottom drawer.</p>
-         </div>
-       </div>
-       </div>
-     </section>
-   </div>
-   <section id="future">
+          <div>
+            <h4>Super Puzzle Ninja</h4>
+            <p>This is a Flash game that I made with the help of the Flixel library in May 2014. It's an action-puzzle game that implements a complex gameplay loop, sprite-based graphics, particle effects, saved high scores, and more while also accounting for performance.</p>
+          </div>
+          <div>
+            <h4>ASoIaF Character Generator</h4>
+            <p>This is a simple web tool that creates characters fit to live in the world of Westeros. Users can select gender, region, and house options, and then generate characters based on their specifications. I used JavaScript to handle character generation and jQuery to implement the UI, which involves a collapsible, dynamic bottom drawer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="future">
     <div class="video-container">
       <video id="video" no-controls autoplay muted loop src="./data/nyc.mp4"></video>
       <div class="filter"></div>
     </div>
     <div class="text-container">
       <div class="row">
-        <div class="columns medium-4 medium-offset-7">
+        <div class="columns medium-4 medium-offset-7 fade">
           <p>This summer, I will be interning with <span class="highlight">Google</span> in <span class="highlight">New York City</span>, where I will be a part of their Answers team.</p>
         </div>
       </div>
     </div>
-   </section>
-   <section id="contact" class="row">
-    <div class="row">
-      <h3>Contact</h3>
-    </div>
-    <div class="row">
-      <div class="columns small-10 medium-8 small-centered">
-        <div class="row">
-          <div class="columns small-6 medium-3 contact-icon fade">
-            <a href="https://www.facebook.com/chad.franzen.9">
-              <i class="fa fa-facebook-official"></i></a>
+  </section>
+
+  <div class="white">
+    <section id="skills" class="row" data-magellan-target="skills">
+      <div class="row title">
+        <h3>SKILLS</h3>
+      </div>
+      <div class="row">
+        <div class="columns medium-10 medium-centered">
+          <div class="columns medium-4 fade">
+            <div class="row">
+              <button class="modal columns medium-centered" data-open="coursework">
+                <i class="fa fa-book"></i>
+                <h4>Coursework</h4>
+              </button>
             </div>
-            <div class="columns small-6 medium-3 contact-icon fade">
-              <a href="https://twitter.com/_chadfranzen">
-                <i class="fa fa-twitter"></i>
-              </a>
+          </div>
+          <div class="columns medium-4 fade">
+            <div class="row">
+              <button class="modal columns medium-centered middle" data-open="languages">
+                <i class="fa fa-terminal"></i>
+                <h4>Languages</h4>
+              </button>
             </div>
-            <div class="columns small-6 medium-3 contact-icon fade">
-              <a href="https://www.linkedin.com/in/chad-franzen-443498a4">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </div>
-            <div class="columns small-6 medium-3 contact-icon fade">
-              <a href="https://github.com/chadfranzen">
-                <i class="fa fa-github"></i>
-              </a>
+          </div>
+          <div class="columns medium-4 fade">
+            <div class="row">
+              <button class="modal columns medium-centered" data-open="web">
+                <i class="fa fa-code"></i>
+                <h4>Web Dev</h4>
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="small reveal" id="coursework" data-reveal>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>COURSEWORK</h3>
+
+        <ul class="no-bullet">
+          <li>Discrete Mathematics</li>
+          <li>Data Structures</li>
+          <li>Systems Programming</li>
+          <li>Algorithms and Models of Computation</li>
+          <li>Computer Architecture</li>
+          <li>Programming Studio</li>
+          <li>Database Systems</li>
+          <li>Computer Security</li>
+          <li>Web Programming</li>
+          <li>Text Information Systems</li>
+          <li>Programming Languages</li>
+        </ul>
+      </div>
+      <div class="small reveal" id="languages" data-reveal>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>LANGUAGES</h3>
+
+        <ul class="no-bullet">
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>ActionScript</li>
+          <li>C/C++</li>
+          <li>Haskell</li>
+          <li>Python</li>
+          <li>Ruby</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+      <div class="small reveal" id="web" data-reveal>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>WEB DEV</h3>
+
+        <ul class="no-bullet">
+          <li>HTML/CSS/Sass</li>
+          <li>ES6 JavaScript</li>
+          <li>Node.js</li>  
+          <li>jQuery</li>
+          <li>Backbone</li>
+          <li>React</li>
+          <li>Grunt</li>
+          <li>Webpack</li>
+        </ul>
+      </div>
     </section>
   </div>
-  <!-- Scripts -->
-  <script src="./lib/jquery-2.1.3.min/index.js"></script>
-  <script src="./foundation6_lib/js/foundation.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+
+  <section id="contact" class="row" data-magellan-target="contact">
+  <div class="row">
+    <h3>Contact</h3>
+  </div>
+  <div class="row">
+    <div class="columns small-10 medium-8 small-centered">
+      <div class="row">
+        <div class="columns small-6 medium-3 contact-icon fade">
+          <a href="https://www.facebook.com/chad.franzen.9">
+            <i class="fa fa-facebook-official"></i></a>
+          </div>
+          <div class="columns small-6 medium-3 contact-icon fade">
+            <a href="https://twitter.com/_chadfranzen">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
+          <div class="columns small-6 medium-3 contact-icon fade">
+            <a href="https://www.linkedin.com/in/chad-franzen-443498a4">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="columns small-6 medium-3 contact-icon fade">
+            <a href="https://github.com/chadfranzen">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Scripts -->
+<script src="./lib/jquery-2.1.3.min/index.js"></script>
+<script src="./foundation6_lib/js/foundation.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

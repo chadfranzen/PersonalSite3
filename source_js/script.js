@@ -12,13 +12,21 @@ $(document).ready(function() {
 
 	// learned from http://cssdeck.com/labs/jquery-fade-in-on-scroll
 	$(document).scroll(function() {
-		$fade.each(function(i, el) {
-			var elPos = $(el).position().top + $(el).height(),
-				windowPos = $(window).scrollTop() + $(window).height();
+		windowPos = $(window).scrollTop() + $(window).height();
 
-			if (elPos < windowPos + $(el).height() / 2) {
+		$fade.each(function(i, el) {
+			var elPos = $(el).position().top + $(el).outerHeight();
+
+			if (elPos < windowPos) {
 				$(el).fadeTo(400, 1);
 			}
 		});
+
+		$('nav').toggleClass('page-end',
+			windowPos >= $('#contact').position().top + $('#contact').outerHeight()
+		);
+	
+		$('nav').toggleClass('large', $(window).scrollTop() < 50);
+
 	});
 });
