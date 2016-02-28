@@ -1,6 +1,6 @@
 // Add any custom Sass & CSS here
 html, body {
-	font-family: $serif;
+	font-family: $body-sans;
 	line-height: 150%;
 	color: $white;
 	background-color: $black;
@@ -50,7 +50,7 @@ h1, h3 {
 	z-index: 2;
 
 	nav, .title-bar {
-		font-family: $sans;
+		font-family: $title-sans;
 		font-weight: bold;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -113,11 +113,11 @@ h1, h3 {
 
 
 #about {
-	padding-bottom: 150px;
+	padding-bottom: $section-spacing-large;
 	.info {
 		padding-left: 30px;
 		padding-right: 30px;
-		margin-top: 150px;
+		margin-top: $section-spacing-large;
 
 		h3 {
 			color: $highlight;
@@ -131,8 +131,8 @@ h1, h3 {
 }
 
 #projects {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: $section-spacing;
+	padding-bottom: $section-spacing;
 
 	p {
 		padding: 0 30px;
@@ -187,8 +187,8 @@ h1, h3 {
 }
 
 #skills {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: $section-spacing;
+	padding-bottom: $section-spacing;
 
 	.modal {
 		border-top: 1px solid black;
@@ -245,8 +245,8 @@ h1, h3 {
 }
 
 #contact {
-	padding-bottom: 150px;
-	padding-top: 100px;
+	padding-bottom: $section-spacing-large;
+	padding-top: $section-spacing;
 	
 	h3 {
 		letter-spacing: 2px;
