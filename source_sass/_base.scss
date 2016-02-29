@@ -44,6 +44,10 @@ h1, h3 {
 	width: 100%;
 }
 
+#site-container {
+	overflow-x: hidden;
+}
+
 .nav-container {
 	position: fixed;
 	width: 100%;
@@ -269,7 +273,7 @@ h1, h3 {
 	#future .video-container video {
 			display: initial;
 	}
-	
+
 	#skills {
 		.modal {
 			border: 1px solid black;
