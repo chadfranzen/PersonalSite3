@@ -158,6 +158,7 @@ h1, h3 {
 
 		video {
 			height: 100%;
+			display: none;
 		}
 
 		.filter {
@@ -265,6 +266,10 @@ h1, h3 {
 }
 
 @media (min-width: 640px) {
+	#future .video-container video {
+			display: initial;
+	}
+	
 	#skills {
 		.modal {
 			border: 1px solid black;
