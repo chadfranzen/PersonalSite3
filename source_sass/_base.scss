@@ -8,6 +8,32 @@ html, body {
 	font-weight: 300;
 }
 
+body.is-reveal-open {
+	padding-right: 8px;
+}
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: $black;
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: #272727;
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(255,255,255,0.3);
+  -webkit-border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(255,255,255,0.4); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
 p {
 	font-size: 1.15em;
 }
@@ -15,6 +41,10 @@ p {
 h1, h3 {
 	letter-spacing: 2px;
 	text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $title-sans;
 }
 
 .highlight {
@@ -46,6 +76,10 @@ h1, h3 {
 
 #site-container {
 	overflow-x: hidden;
+}
+
+.top-bar, #nav-list {
+	background-color: $black;
 }
 
 .nav-container {
@@ -227,36 +261,37 @@ h1, h3 {
 			color: $highlight;
 		}
 	}
+}
 
-	.reveal {
+.reveal {
+	color: $white;
+	background-color: $black;
+	padding: 60px 60px;
+
+	.close-button {
+		span {
+			font-size: 2.25em;
+			line-height: 15px;
+		}
+
+		position: absolute;
+		top: 0;
+		right: 0;
 		color: $white;
-		padding: 60px 60px;
+		padding-right: 15px;
+		padding-top: 15px;
 
-		.close-button {
-			span {
-				font-size: 2.25em;
-				line-height: 15px;
-			}
-
-			position: absolute;
-			top: 0;
-			right: 0;
-			color: $white;
-			padding-right: 15px;
-			padding-top: 15px;
-
-			&:hover {
-				color: $highlight;
-			}
+		&:hover {
+			color: $highlight;
 		}
+	}
 
-		h3 {
-			margin-bottom: 20px;
-		}
+	h3 {
+		margin-bottom: 20px;
+	}
 
-		li {
-			font-size: 1.1em;
-		}
+	li {
+		font-size: 1.1em;
 	}
 }
 
